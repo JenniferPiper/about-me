@@ -1,22 +1,71 @@
 'use strict';
 
-
 var userName ,
     currentAnswer;
 
 userName = prompt('Hello! What is your name?');
 console.log('User\'s name: ' , userName); 
 
-alert('Hello '+ userName +', this is a quiz about me. Please guess whether the following things about me are true or not, by typing yes or no for each question.');
+alert('Hello '+ userName +', this is a quiz game about me. Please guess whether the following things about me are true or not, by typing yes or no for each question.');
 
 currentAnswer = prompt('Do you think I have ever been scuba diving?');
 currentAnswer = currentAnswer.toLowerCase();
 if( currentAnswer === 'yes' || currentAnswer === 'y'){
-console.log('scuba answer is yes');
-alert( 'That\'s correct! I\'ve been scuba diving many times.')
+  console.log('scuba answer is yes');
+  alert( 'That\'s correct! I\'ve been scuba diving many times.')
 } else if( currentAnswer === 'no' || currentAnswer === 'n'){
     console.log('scuba answer is no');
     alert( 'That\'s incorrect. I\'ve been scuba diving many times.')
 } else {
     alert('I dont understand that. For the next question, please answer yes or no.')
 }
+
+currentAnswer = prompt('Do you think I have ever been skydiving?');
+currentAnswer = currentAnswer.toLowerCase();
+if( currentAnswer === 'yes' || currentAnswer === 'y'){
+  console.log('skydiving answer is yes');
+  alert( 'That\'s incorrect. I\'ve never really been skydiving. I\'ve done simulated skydiving in a wind tunnel though, and that\'s really fun!' );
+} else if( currentAnswer === 'no' || currentAnswer === 'n'){
+    console.log('skydiving answer is no');
+    alert( 'That\'s correct. I\'ve never really been skydiving. I\'ve done simulated skydiving in a wind tunnel though, and that\'s really fun!')
+} else {
+    alert('I dont understand that. For the next question, please answer yes or no.')
+}
+
+currentAnswer = prompt('Do you think I am an avid video gamer?');
+currentAnswer = currentAnswer.toLowerCase();
+if( currentAnswer === 'yes' || currentAnswer === 'y'){
+  console.log('gamer answer is yes');
+  alert( 'No, not really. Most games are fun for a bit but then I lose interest. Exception: puzzle games. Portal and Portal 2 are my favorites!')
+} else if( currentAnswer === 'no' || currentAnswer === 'n'){
+    console.log('gamer answer is no');
+    alert( 'That\'s correct. Most games are fun for a bit but then I lose interest. Exception: puzzle games. Portal and Portal 2 are my favorites!')
+} else {
+    alert('I dont understand that. For the next question, please answer yes or no.')
+}
+
+currentAnswer = prompt('Do you think I\'m a Star Wars fan?');
+currentAnswer = currentAnswer.toLowerCase();
+if( currentAnswer === 'yes' || currentAnswer === 'y'){
+  console.log('Star Wars answer is yes');
+  alert( 'Yep! Love it.')
+} else if( currentAnswer === 'no' || currentAnswer === 'n'){
+    console.log('Star Wars  answer is no');
+    alert( 'That\'s incorrect. I\'ve always loved Star Wars.')
+} else {
+    alert('I dont understand that. For the next question, please answer yes or no.')
+}
+
+currentAnswer = prompt('Do you think I have ever performed on stage with Macklemore?');
+currentAnswer = currentAnswer.toLowerCase();
+if( currentAnswer === 'yes' || currentAnswer === 'y'){
+  console.log('Macklemore answer is yes');
+  alert( 'Nah, that\'s not true.');
+} else if( currentAnswer === 'no' || currentAnswer === 'n'){
+    console.log('Macklemore answer is no');
+    alert( 'Haha, you\'re right, I\'ve never done that.')
+} else {
+    alert('I dont understand that. For the next question, please answer yes or no.')
+}
+
+alert('Thanks for playing the About Me game!');
