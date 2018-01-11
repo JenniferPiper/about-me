@@ -88,4 +88,36 @@ if( currentAnswer === myNumber){
 }
 }
 
-alert('Thanks for playing the About Me game!');
+var myStates = [' Maryland', ' New Mexico', ' California', ' Hawaii'];
+var remainingGuesses = 6;
+console.log('Number of states: ' + myStates.length);
+    while(remainingGuesses > 0){
+        console.log('Remaining guesses: ' + remainingGuesses );
+currentAnswer = prompt('Can you guess a state that I have lived in besides Washington?');
+console.log('User guessed ' + currentAnswer );
+currentAnswer = ' ' + currentAnswer.toLowerCase();
+var j = 0;
+var correctFlag = false;
+while(j < myStates.length) {
+  var currentState = myStates[j].toLowerCase();
+  if (currentAnswer === currentState){  
+      correctFlag = true;
+    alert('Correct!\nStates I have lived in besides Washington are: ' + myStates + '.'); 
+      break;
+  }
+  j++;
+}
+if (correctFlag){
+    console.log('State question was answered correctly');
+    break;
+}
+remainingGuesses--;
+if(remainingGuesses > 0) {
+    alert('No, guess again.');  
+}
+else {
+    alert('Incorrect, and that\'s all the guesses allowed.\nStates I have lived in besides Washington are: ' + myStates + '.'); 
+}
+}
+
+alert('Thanks for playing the About Me game, ' + userName + '!');
