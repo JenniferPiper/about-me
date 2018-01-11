@@ -9,20 +9,25 @@ console.log('User\'s name: ' , userName);
 
 alert('Hello ' + userName + ', this is a quiz game about me. There are 7 questions. For the first 5 questions, please guess whether the following things about me are true or not, by typing yes or no for each question.');
 
-currentAnswer = prompt('1. Do you think I have ever been scuba diving?');
-currentAnswer = currentAnswer.toLowerCase();
-if( currentAnswer === 'yes' || currentAnswer === 'y'){
-  console.log('scuba answer is yes');
-  alert( 'That\'s correct! I\'ve been scuba diving many times.');
-  correctAnswers++;
-} else if( currentAnswer === 'no' || currentAnswer === 'n'){
-  console.log('scuba answer is no');
-  alert( 'That\'s incorrect. I\'ve been scuba diving many times.');
-} else {
-  alert('I dont understand that. For the next question, please answer yes or no.');
+// Question 1
+function question1() {
+  currentAnswer = prompt('1. Do you think I have ever been scuba diving?');
+  currentAnswer = currentAnswer.toLowerCase();
+  if( currentAnswer === 'yes' || currentAnswer === 'y'){
+    console.log('scuba answer is yes');
+    alert( 'That\'s correct! I\'ve been scuba diving many times.');
+    correctAnswers++;
+  } else if( currentAnswer === 'no' || currentAnswer === 'n'){
+    console.log('scuba answer is no');
+    alert( 'That\'s incorrect. I\'ve been scuba diving many times.');
+  } else {
+    alert('I dont understand that. For the next question, please answer yes or no.');
+  }
+  console.log( 'Correct answers: ' + correctAnswers );
 }
-console.log( 'Correct answers: ' + correctAnswers );
+question1();
 
+// Question 2
 currentAnswer = prompt('2. Do you think I have ever been skydiving?');
 currentAnswer = currentAnswer.toLowerCase();
 if( currentAnswer === 'yes' || currentAnswer === 'y'){
@@ -37,6 +42,7 @@ if( currentAnswer === 'yes' || currentAnswer === 'y'){
 }
 console.log( 'Correct answers: ' + correctAnswers );
 
+// Question 3
 currentAnswer = prompt('3. Do you think I am an avid video gamer?');
 currentAnswer = currentAnswer.toLowerCase();
 if( currentAnswer === 'yes' || currentAnswer === 'y'){
@@ -51,6 +57,7 @@ if( currentAnswer === 'yes' || currentAnswer === 'y'){
 }
 console.log( 'Correct answers: ' + correctAnswers );
 
+// Question 4
 currentAnswer = prompt('4. Do you think I\'m a Star Wars fan?');
 currentAnswer = currentAnswer.toLowerCase();
 if( currentAnswer === 'yes' || currentAnswer === 'y'){
@@ -65,6 +72,7 @@ if( currentAnswer === 'yes' || currentAnswer === 'y'){
 }
 console.log( 'Correct answers: ' + correctAnswers );
 
+// Question 5
 currentAnswer = prompt('5. Do you think I have ever performed on stage with Macklemore?');
 currentAnswer = currentAnswer.toLowerCase();
 if( currentAnswer === 'yes' || currentAnswer === 'y'){
@@ -79,6 +87,7 @@ if( currentAnswer === 'yes' || currentAnswer === 'y'){
 }
 console.log( 'Correct answers: ' + correctAnswers );
 
+// Question 6
 var myNumber = 8;
 var allowedGuesses = 4;
 currentAnswer = prompt('6. Guess what number I\'m thinking of? You have ' + allowedGuesses + ' guesses.');
@@ -101,6 +110,7 @@ for(var i = 0; i < allowedGuesses; i++){
 }
 console.log( 'Correct answers: ' + correctAnswers );
 
+// Question 7
 var myStates = [' Maryland', ' New Mexico', ' California', ' Hawaii'];
 console.log('Number of states: ' + myStates.length);
 var remainingGuesses = 6;
@@ -133,6 +143,7 @@ while(remainingGuesses > 0){
     alert('Incorrect, and that\'s all the guesses allowed.\nStates I have lived in besides Washington are: ' + myStates + '.');
   }
 }
+
 console.log( 'Correct answers: ' + correctAnswers );
 
 alert('Thanks for playing the About Me game, ' + userName + '! You got ' + correctAnswers + ' correct answers out of 7.');
