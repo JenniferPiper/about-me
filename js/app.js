@@ -83,58 +83,55 @@ var myNumber = 8;
 var allowedGuesses = 4;
 currentAnswer = prompt('6. Guess what number I\'m thinking of? You have ' + allowedGuesses + ' guesses.');
 for(var i = 0; i < allowedGuesses; i++){
-currentAnswer = parseInt(currentAnswer);
-console.log('User guessed number ' + currentAnswer );
-
-if( currentAnswer === myNumber){
-  alert( 'Correct! The number was ' + myNumber );
-  correctAnswers++;
-  break;
-} else if(i === allowedGuesses-1){
-    alert( 'Incorrect, and that\'s all the guesses allowed. The number was ' + myNumber + '.' );
-} else if( currentAnswer < myNumber ){
-    currentAnswer = prompt( 'The answer is higher than that. Please guess again.' );
-} else if( currentAnswer > myNumber ){
-    currentAnswer = prompt( 'The answer is lower than that. Please guess again.' );
-} else {
+  currentAnswer = parseInt(currentAnswer);
+  console.log('User guessed number ' + currentAnswer );
+  if( currentAnswer === myNumber){
+    alert( 'Correct! The number was ' + myNumber );
+    correctAnswers++;
+    break;
+  } else if(i === allowedGuesses-1){
+      alert( 'Incorrect, and that\'s all the guesses allowed. The number was ' + myNumber + '.' );
+  } else if( currentAnswer < myNumber ){
+      currentAnswer = prompt( 'The answer is higher than that. Please guess again.' );
+  } else if( currentAnswer > myNumber ){
+      currentAnswer = prompt( 'The answer is lower than that. Please guess again.' );
+  } else {
     currentAnswer = prompt( 'I dont understand that. Please guess again.' );
-}
+  }
 }
 console.log( 'Correct answers: ' + correctAnswers );
-
-
 
 var myStates = [' Maryland', ' New Mexico', ' California', ' Hawaii'];
 console.log('Number of states: ' + myStates.length);
 var remainingGuesses = 6;
 currentAnswer = prompt('7. Can you guess a state that I have lived in besides Washington? You have ' + remainingGuesses + ' guesses.');
 while(remainingGuesses > 0){
-console.log('Remaining guesses: ' + remainingGuesses );
-console.log('User guessed ' + currentAnswer );
-currentAnswer = ' ' + currentAnswer.toLowerCase();
-var j = 0;
-var correctFlag = false;
-while(j < myStates.length) {
-  var currentState = myStates[j].toLowerCase();
-  if (currentAnswer === currentState){  
-      correctFlag = true;
-    alert('Correct!\nStates I have lived in besides Washington are: ' + myStates + '.'); 
-    correctAnswers++;
+  console.log('Remaining guesses: ' + remainingGuesses );
+  console.log('User guessed ' + currentAnswer );
+  currentAnswer = ' ' + currentAnswer.toLowerCase();
+  var j = 0;
+  var correctFlag = false;
+  while(j < myStates.length) {
+    var currentState = myStates[j].toLowerCase();
+    if (currentAnswer === currentState){  
+        correctFlag = true;
+      alert('Correct!\nStates I have lived in besides Washington are: ' + myStates + '.'); 
+      correctAnswers++;
+        break;
+    }
+    j++;
+  }
+  if (correctFlag){
+      console.log('State question was answered correctly');
       break;
   }
-  j++;
-}
-if (correctFlag){
-    console.log('State question was answered correctly');
-    break;
-}
-remainingGuesses--;
-if(remainingGuesses > 0) {
-    currentAnswer = prompt('No, guess again.');  
-}
-else {
-    alert('Incorrect, and that\'s all the guesses allowed.\nStates I have lived in besides Washington are: ' + myStates + '.'); 
-}
+  remainingGuesses--;
+  if(remainingGuesses > 0) {
+      currentAnswer = prompt('No, guess again.');  
+  }
+  else {
+      alert('Incorrect, and that\'s all the guesses allowed.\nStates I have lived in besides Washington are: ' + myStates + '.'); 
+  }
 }
 console.log( 'Correct answers: ' + correctAnswers );
 
