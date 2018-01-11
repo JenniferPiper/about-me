@@ -25,67 +25,74 @@ function question1() {
   }
   console.log( 'Correct answers: ' + correctAnswers );
 }
-question1();
 
 // Question 2
-currentAnswer = prompt('2. Do you think I have ever been skydiving?');
-currentAnswer = currentAnswer.toLowerCase();
-if( currentAnswer === 'yes' || currentAnswer === 'y'){
-  console.log('skydiving answer is yes');
-  alert( 'That\'s incorrect. I\'ve never really been skydiving. I\'ve done simulated skydiving in a wind tunnel though, and that\'s really fun!' );
-} else if( currentAnswer === 'no' || currentAnswer === 'n'){
-  console.log('skydiving answer is no');
-  alert( 'That\'s correct. I\'ve never really been skydiving. I\'ve done simulated skydiving in a wind tunnel though, and that\'s really fun!');
-  correctAnswers++;
-} else {
-  alert('I dont understand that. For the next question, please answer yes or no.');
+function question2() {
+  currentAnswer = prompt('2. Do you think I have ever been skydiving?');
+  currentAnswer = currentAnswer.toLowerCase();
+  if( currentAnswer === 'yes' || currentAnswer === 'y'){
+    console.log('skydiving answer is yes');
+    alert( 'That\'s incorrect. I\'ve never really been skydiving. I\'ve done simulated skydiving in a wind tunnel though, and that\'s really fun!' );
+  } else if( currentAnswer === 'no' || currentAnswer === 'n'){
+    console.log('skydiving answer is no');
+    alert( 'That\'s correct. I\'ve never really been skydiving. I\'ve done simulated skydiving in a wind tunnel though, and that\'s really fun!');
+    correctAnswers++;
+  } else {
+    alert('I dont understand that. For the next question, please answer yes or no.');
+  }
+  console.log( 'Correct answers: ' + correctAnswers );
 }
-console.log( 'Correct answers: ' + correctAnswers );
 
 // Question 3
-currentAnswer = prompt('3. Do you think I am an avid video gamer?');
-currentAnswer = currentAnswer.toLowerCase();
-if( currentAnswer === 'yes' || currentAnswer === 'y'){
-  console.log('gamer answer is yes');
-  alert( 'No, not really. Most games are fun for a bit but then I lose interest. Exception: puzzle games. Portal and Portal 2 are my favorites!')
-} else if( currentAnswer === 'no' || currentAnswer === 'n'){
-  console.log('gamer answer is no');
-  alert( 'That\'s correct. Most games are fun for a bit but then I lose interest. Exception: puzzle games. Portal and Portal 2 are my favorites!');
-  correctAnswers++;
-} else {
-  alert('I dont understand that. For the next question, please answer yes or no.');
+function question3() {
+  currentAnswer = prompt('3. Do you think I am an avid video gamer?');
+  currentAnswer = currentAnswer.toLowerCase();
+  if( currentAnswer === 'yes' || currentAnswer === 'y'){
+    console.log('gamer answer is yes');
+    alert( 'No, not really. Most games are fun for a bit but then I lose interest. Exception: puzzle games. Portal and Portal 2 are my favorites!')
+  } else if( currentAnswer === 'no' || currentAnswer === 'n'){
+    console.log('gamer answer is no');
+    alert( 'That\'s correct. Most games are fun for a bit but then I lose interest. Exception: puzzle games. Portal and Portal 2 are my favorites!');
+    correctAnswers++;
+  } else {
+    alert('I dont understand that. For the next question, please answer yes or no.');
+  }
+  console.log( 'Correct answers: ' + correctAnswers );
 }
-console.log( 'Correct answers: ' + correctAnswers );
 
 // Question 4
-currentAnswer = prompt('4. Do you think I\'m a Star Wars fan?');
-currentAnswer = currentAnswer.toLowerCase();
-if( currentAnswer === 'yes' || currentAnswer === 'y'){
-  console.log('Star Wars answer is yes');
-  alert( 'Yep! Love it.');
-  correctAnswers++;
-} else if( currentAnswer === 'no' || currentAnswer === 'n'){
-  console.log('Star Wars  answer is no');
-  alert( 'That\'s incorrect. I\'ve always loved Star Wars.');
-} else {
-  alert('I dont understand that. For the next question, please answer yes or no.');
+function question4() {
+  currentAnswer = prompt('4. Do you think I\'m a Star Wars fan?');
+  currentAnswer = currentAnswer.toLowerCase();
+  if( currentAnswer === 'yes' || currentAnswer === 'y'){
+    console.log('Star Wars answer is yes');
+    alert( 'Yep! Love it.');
+    correctAnswers++;
+  } else if( currentAnswer === 'no' || currentAnswer === 'n'){
+    console.log('Star Wars  answer is no');
+    alert( 'That\'s incorrect. I\'ve always loved Star Wars.');
+  } else {
+    alert('I dont understand that. For the next question, please answer yes or no.');
+  }
+  console.log( 'Correct answers: ' + correctAnswers );
 }
-console.log( 'Correct answers: ' + correctAnswers );
 
 // Question 5
-currentAnswer = prompt('5. Do you think I have ever performed on stage with Macklemore?');
-currentAnswer = currentAnswer.toLowerCase();
-if( currentAnswer === 'yes' || currentAnswer === 'y'){
-  console.log('Macklemore answer is yes');
-  alert( 'Nah, that\'s not true.');
-} else if( currentAnswer === 'no' || currentAnswer === 'n'){
-  console.log('Macklemore answer is no');
-  alert( 'Haha, you\'re right, I\'ve never done that.');
-  correctAnswers++;
-} else {
-  alert('I dont understand that.');
+function question5() {
+  currentAnswer = prompt('5. Do you think I have ever performed on stage with Macklemore?');
+  currentAnswer = currentAnswer.toLowerCase();
+  if( currentAnswer === 'yes' || currentAnswer === 'y'){
+    console.log('Macklemore answer is yes');
+    alert( 'Nah, that\'s not true.');
+  } else if( currentAnswer === 'no' || currentAnswer === 'n'){
+    console.log('Macklemore answer is no');
+    alert( 'Haha, you\'re right, I\'ve never done that.');
+    correctAnswers++;
+  } else {
+    alert('I dont understand that.');
+  }
+  console.log( 'Correct answers: ' + correctAnswers );
 }
-console.log( 'Correct answers: ' + correctAnswers );
 
 // Question 6
 var myNumber = 8;
@@ -144,6 +151,14 @@ while(remainingGuesses > 0){
   }
 }
 
+question1();
+question2();
+question3();
+question4();
+question5();
+
+
 console.log( 'Correct answers: ' + correctAnswers );
 
 alert('Thanks for playing the About Me game, ' + userName + '! You got ' + correctAnswers + ' correct answers out of 7.');
+
