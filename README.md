@@ -1,2 +1,2 @@
 # about-me
-This is a quiz game with five questions about me.
+This is an interactive page with fun and informative facts about me. It includes a quiz game with seven questions, and a page with a list of my work experience and a list of some of my favorite things.
