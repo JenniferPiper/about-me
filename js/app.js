@@ -67,5 +67,25 @@ if( currentAnswer === 'yes' || currentAnswer === 'y'){
 } else {
     alert('I dont understand that. For the next question, please answer yes or no.')
 }
+var myNumber = 8;
+var allowedGuesses = 4;
+for(var i = 0; i < allowedGuesses; i++){
+currentAnswer = prompt('What number am I thinking of?');
+currentAnswer = parseInt(currentAnswer);
+console.log('User guessed number ' + currentAnswer );
+
+if( currentAnswer === myNumber){
+  alert( 'Correct! The number was ' + myNumber );
+  break;
+} else if(i === allowedGuesses-1){
+    alert('Incorrect, and that\'s all the guesses allowed. The number was ' + myNumber + '.');
+} else if( currentAnswer < myNumber ){
+    alert( 'The answer is higher than that. Please guess again.')
+} else if( currentAnswer > myNumber ){
+    alert( 'The answer is lower than that. Please guess again.')
+} else {
+    alert('I dont understand that. Please guess again.');
+}
+}
 
 alert('Thanks for playing the About Me game!');
