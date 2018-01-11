@@ -23,12 +23,18 @@ p, li {
 ul, ol {
     margin: 0.5em 0 0.5em 1.5em;
 }
-li {
+ul li {
     list-style-type: disc;
 }
-li li {
+ul li li {
     list-style-type: circle;
+}
+ol li {
+    list-style-type: decimal;
+    padding-left: 0.1em;
 }
 section {
     margin: 1rem 0;
+    padding: 0.5rem 0;
+    border-top: 2px solid orange;
 }
