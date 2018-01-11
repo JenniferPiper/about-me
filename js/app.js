@@ -1,13 +1,13 @@
 'use strict';
 
 var userName ,
-    currentAnswer,
-    correctAnswers = 0;
+  currentAnswer,
+  correctAnswers = 0;
 
 userName = prompt('Hello! What is your name?');
-console.log('User\'s name: ' , userName); 
+console.log('User\'s name: ' , userName);
 
-alert('Hello '+ userName +', this is a quiz game about me. There are 7 questions. For the first 5 questions, please guess whether the following things about me are true or not, by typing yes or no for each question.');
+alert('Hello ' + userName + ', this is a quiz game about me. There are 7 questions. For the first 5 questions, please guess whether the following things about me are true or not, by typing yes or no for each question.');
 
 currentAnswer = prompt('1. Do you think I have ever been scuba diving?');
 currentAnswer = currentAnswer.toLowerCase();
@@ -16,10 +16,10 @@ if( currentAnswer === 'yes' || currentAnswer === 'y'){
   alert( 'That\'s correct! I\'ve been scuba diving many times.');
   correctAnswers++;
 } else if( currentAnswer === 'no' || currentAnswer === 'n'){
-    console.log('scuba answer is no');
-    alert( 'That\'s incorrect. I\'ve been scuba diving many times.');
+  console.log('scuba answer is no');
+  alert( 'That\'s incorrect. I\'ve been scuba diving many times.');
 } else {
-    alert('I dont understand that. For the next question, please answer yes or no.');
+  alert('I dont understand that. For the next question, please answer yes or no.');
 }
 console.log( 'Correct answers: ' + correctAnswers );
 
@@ -29,11 +29,11 @@ if( currentAnswer === 'yes' || currentAnswer === 'y'){
   console.log('skydiving answer is yes');
   alert( 'That\'s incorrect. I\'ve never really been skydiving. I\'ve done simulated skydiving in a wind tunnel though, and that\'s really fun!' );
 } else if( currentAnswer === 'no' || currentAnswer === 'n'){
-    console.log('skydiving answer is no');
-    alert( 'That\'s correct. I\'ve never really been skydiving. I\'ve done simulated skydiving in a wind tunnel though, and that\'s really fun!');
-    correctAnswers++;
+  console.log('skydiving answer is no');
+  alert( 'That\'s correct. I\'ve never really been skydiving. I\'ve done simulated skydiving in a wind tunnel though, and that\'s really fun!');
+  correctAnswers++;
 } else {
-    alert('I dont understand that. For the next question, please answer yes or no.');
+  alert('I dont understand that. For the next question, please answer yes or no.');
 }
 console.log( 'Correct answers: ' + correctAnswers );
 
@@ -43,11 +43,11 @@ if( currentAnswer === 'yes' || currentAnswer === 'y'){
   console.log('gamer answer is yes');
   alert( 'No, not really. Most games are fun for a bit but then I lose interest. Exception: puzzle games. Portal and Portal 2 are my favorites!')
 } else if( currentAnswer === 'no' || currentAnswer === 'n'){
-    console.log('gamer answer is no');
-    alert( 'That\'s correct. Most games are fun for a bit but then I lose interest. Exception: puzzle games. Portal and Portal 2 are my favorites!');
-    correctAnswers++;
+  console.log('gamer answer is no');
+  alert( 'That\'s correct. Most games are fun for a bit but then I lose interest. Exception: puzzle games. Portal and Portal 2 are my favorites!');
+  correctAnswers++;
 } else {
-    alert('I dont understand that. For the next question, please answer yes or no.');
+  alert('I dont understand that. For the next question, please answer yes or no.');
 }
 console.log( 'Correct answers: ' + correctAnswers );
 
@@ -58,10 +58,10 @@ if( currentAnswer === 'yes' || currentAnswer === 'y'){
   alert( 'Yep! Love it.');
   correctAnswers++;
 } else if( currentAnswer === 'no' || currentAnswer === 'n'){
-    console.log('Star Wars  answer is no');
-    alert( 'That\'s incorrect. I\'ve always loved Star Wars.');
+  console.log('Star Wars  answer is no');
+  alert( 'That\'s incorrect. I\'ve always loved Star Wars.');
 } else {
-    alert('I dont understand that. For the next question, please answer yes or no.');
+  alert('I dont understand that. For the next question, please answer yes or no.');
 }
 console.log( 'Correct answers: ' + correctAnswers );
 
@@ -71,11 +71,11 @@ if( currentAnswer === 'yes' || currentAnswer === 'y'){
   console.log('Macklemore answer is yes');
   alert( 'Nah, that\'s not true.');
 } else if( currentAnswer === 'no' || currentAnswer === 'n'){
-    console.log('Macklemore answer is no');
-    alert( 'Haha, you\'re right, I\'ve never done that.');
-    correctAnswers++;
+  console.log('Macklemore answer is no');
+  alert( 'Haha, you\'re right, I\'ve never done that.');
+  correctAnswers++;
 } else {
-    alert('I dont understand that.');
+  alert('I dont understand that.');
 }
 console.log( 'Correct answers: ' + correctAnswers );
 
@@ -89,12 +89,12 @@ for(var i = 0; i < allowedGuesses; i++){
     alert( 'Correct! The number was ' + myNumber );
     correctAnswers++;
     break;
-  } else if(i === allowedGuesses-1){
-      alert( 'Incorrect, and that\'s all the guesses allowed. The number was ' + myNumber + '.' );
+  } else if(i === allowedGuesses - 1){
+    alert( 'Incorrect, and that\'s all the guesses allowed. The number was ' + myNumber + '.' );
   } else if( currentAnswer < myNumber ){
-      currentAnswer = prompt( 'The answer is higher than that. Please guess again.' );
+    currentAnswer = prompt( 'The answer is higher than that. Please guess again.' );
   } else if( currentAnswer > myNumber ){
-      currentAnswer = prompt( 'The answer is lower than that. Please guess again.' );
+    currentAnswer = prompt( 'The answer is lower than that. Please guess again.' );
   } else {
     currentAnswer = prompt( 'I dont understand that. Please guess again.' );
   }
@@ -113,24 +113,24 @@ while(remainingGuesses > 0){
   var correctFlag = false;
   while(j < myStates.length) {
     var currentState = myStates[j].toLowerCase();
-    if (currentAnswer === currentState){  
-        correctFlag = true;
-      alert('Correct!\nStates I have lived in besides Washington are: ' + myStates + '.'); 
+    if (currentAnswer === currentState){
+      correctFlag = true;
+      alert('Correct!\nStates I have lived in besides Washington are: ' + myStates + '.');
       correctAnswers++;
-        break;
+      break;
     }
     j++;
   }
   if (correctFlag){
-      console.log('State question was answered correctly');
-      break;
+    console.log('State question was answered correctly');
+    break;
   }
   remainingGuesses--;
   if(remainingGuesses > 0) {
-      currentAnswer = prompt('No, guess again.');  
+    currentAnswer = prompt('No, guess again.');
   }
   else {
-      alert('Incorrect, and that\'s all the guesses allowed.\nStates I have lived in besides Washington are: ' + myStates + '.'); 
+    alert('Incorrect, and that\'s all the guesses allowed.\nStates I have lived in besides Washington are: ' + myStates + '.');
   }
 }
 console.log( 'Correct answers: ' + correctAnswers );
