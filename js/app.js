@@ -49,7 +49,7 @@ function question3() {
   currentAnswer = currentAnswer.toLowerCase();
   if( currentAnswer === 'yes' || currentAnswer === 'y'){
     console.log('gamer answer is yes');
-    alert( 'No, not really. Most games are fun for a bit but then I lose interest. Exception: puzzle games. Portal and Portal 2 are my favorites!')
+    alert( 'No, not really. Most games are fun for a bit but then I lose interest. Exception: puzzle games. Portal and Portal 2 are my favorites!');
   } else if( currentAnswer === 'no' || currentAnswer === 'n'){
     console.log('gamer answer is no');
     alert( 'That\'s correct. Most games are fun for a bit but then I lose interest. Exception: puzzle games. Portal and Portal 2 are my favorites!');
