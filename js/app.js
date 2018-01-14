@@ -11,8 +11,7 @@ alert('Hello ' + userName + ', this is a quiz game about me. There are 7 questio
 
 // Question 1
 function question1() {
-  currentAnswer = prompt('1. Do you think I have ever been scuba diving?');
-  currentAnswer = currentAnswer.toLowerCase();
+  currentAnswer = prompt('1. Do you think I have ever been scuba diving?').toLowerCase();
   if( currentAnswer === 'yes' || currentAnswer === 'y'){
     console.log('scuba answer is yes');
     alert( 'That\'s correct! I\'ve been scuba diving many times.');
@@ -28,8 +27,7 @@ function question1() {
 
 // Question 2
 function question2() {
-  currentAnswer = prompt('2. Do you think I have ever been skydiving?');
-  currentAnswer = currentAnswer.toLowerCase();
+  currentAnswer = prompt('2. Do you think I have ever been skydiving?').toLowerCase();
   if( currentAnswer === 'yes' || currentAnswer === 'y'){
     console.log('skydiving answer is yes');
     alert( 'That\'s incorrect. I\'ve never really been skydiving. I\'ve done simulated skydiving in a wind tunnel though, and that\'s really fun!' );
@@ -45,8 +43,7 @@ function question2() {
 
 // Question 3
 function question3() {
-  currentAnswer = prompt('3. Do you think I am an avid video gamer?');
-  currentAnswer = currentAnswer.toLowerCase();
+  currentAnswer = prompt('3. Do you think I am an avid video gamer?').toLowerCase();
   if( currentAnswer === 'yes' || currentAnswer === 'y'){
     console.log('gamer answer is yes');
     alert( 'No, not really. Most games are fun for a bit but then I lose interest. Exception: puzzle games. Portal and Portal 2 are my favorites!');
@@ -62,8 +59,7 @@ function question3() {
 
 // Question 4
 function question4() {
-  currentAnswer = prompt('4. Do you think I\'m a Star Wars fan?');
-  currentAnswer = currentAnswer.toLowerCase();
+  currentAnswer = prompt('4. Do you think I\'m a Star Wars fan?').toLowerCase();
   if( currentAnswer === 'yes' || currentAnswer === 'y'){
     console.log('Star Wars answer is yes');
     alert( 'Yep! Love it.');
@@ -79,8 +75,7 @@ function question4() {
 
 // Question 5
 function question5() {
-  currentAnswer = prompt('5. Do you think I have ever performed on stage with Macklemore?');
-  currentAnswer = currentAnswer.toLowerCase();
+  currentAnswer = prompt('5. Do you think I have ever performed on stage with Macklemore?').toLowerCase();
   if( currentAnswer === 'yes' || currentAnswer === 'y'){
     console.log('Macklemore answer is yes');
     alert( 'Nah, that\'s not true.');
